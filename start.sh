@@ -7,7 +7,9 @@ echo '你可以用命令测试 curl --socks5 127.0.0.1:1985 http://httpbin.org/i
 echo '启动privoxy...'
 privoxy --user privoxy /usr/local/etc/privoxy/config
 
-echo '输入以下命令开启流量转发：
+export http_proxy=http://127.0.0.1:8118
+export https_proxy=http://127.0.0.1:8118
+echo '如果没有生效，请输入以下命令开启流量转发：
 export http_proxy=http://127.0.0.1:8118
 export https_proxy=http://127.0.0.1:8118
 '
